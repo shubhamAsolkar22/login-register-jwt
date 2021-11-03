@@ -1,14 +1,14 @@
 <div class="landing-page">
-    <form  [formGroup]="landingform">
+    <form [formGroup]="landingform">
         <label for="email">Email: </label>
-        <input type="text" 
-        name="email" 
-        id="email"
-        placeholder="Abc@xyz.com"
-        formControlName="email"
-        />
-        <div *ngIf="email !== null && email.touched && email.errors?.required">Email is required.</div>
-        <div *ngIf="email !== null && email.touched && email.errors?.email">Please enter a valid email.</div>
-        <!-- <input type="submit" name="submitUN" id="submitUN" value="go!"/> -->
+        <input (focusout)="checkIfUserExists(email && email.value)" type="text" name="email" id="email" placeholder="Abc@xyz.com" formControlName="email" />
+        <div class="input-error-msg" *ngIf="email !== null && email.touched && email.errors?.required">Email is
+            required.</div>
+        <div class="input-error-msg" *ngIf="email !== null && email.touched && email.errors?.email">Please enter a valid
+            email.</div>
+        <!-- <button type="submit" name="submitUN" id="submitUN" value="Next"/> -->
+        <app-button *ngIf="email !== null && email.touched && email.valid && userExists" color="skyblue" text="Next"
+            (btnClick)="goForPwd()"></app-button>
     </form>
+    <!-- <div *ngIf="userExists">User is present.</div> -->
 </div>
