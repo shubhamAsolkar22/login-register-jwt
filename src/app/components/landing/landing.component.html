@@ -1,0 +1,13 @@
+<div class="landing-page">
+    <form  [formGroup]="landingform">
+        <label for="email">Email: </label>
+        <input type="text" 
+        name="email" 
+        id="email"
+        placeholder="Abc@xyz.com"
+        formControlName="email"
+        />
+        <span *ngIf="email !== null && email.touched && email.invalid">Email is required.</span>
+        <!-- <input type="submit" name="submitUN" id="submitUN" value="go!"/> -->
+    </form>
+</div>
