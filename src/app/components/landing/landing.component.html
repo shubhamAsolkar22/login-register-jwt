@@ -7,7 +7,8 @@
         placeholder="Abc@xyz.com"
         formControlName="email"
         />
-        <span *ngIf="email !== null && email.touched && email.invalid">Email is required.</span>
+        <div *ngIf="email !== null && email.touched && email.errors?.required">Email is required.</div>
+        <div *ngIf="email !== null && email.touched && email.errors?.email">Please enter a valid email.</div>
         <!-- <input type="submit" name="submitUN" id="submitUN" value="go!"/> -->
     </form>
 </div>
