@@ -1,6 +1,16 @@
 # LoginRegisterJwt
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+## Concepts learnt from this project
+
+[Local storage: One of the best ways to store data. Local storage is not vulnerable to CSRF attacks.](https://www.syncfusion.com/blogs/post/best-practices-for-jwt-authentication-in-angular-apps.aspx)
+
+For additional security, we must consider a few more things on the server side, such as:
+
+* Token expiration validation.
+* Content security policy.
+* Refresh token mechanism.
+* Anti-forgery token mechanism.
 
 ## Development server
 
