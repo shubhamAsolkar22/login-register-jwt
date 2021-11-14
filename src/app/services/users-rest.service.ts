@@ -8,7 +8,7 @@ import { UsersService } from './users-service';
 @Injectable({
   providedIn: 'root'
 })
-export class UsersRestServiceService implements UsersService{
+export class UsersRestService implements UsersService{
 
   constructor(private httpClient: HttpClient) { }
   
@@ -16,7 +16,7 @@ export class UsersRestServiceService implements UsersService{
     const formData: FormData = new FormData();
     formData.set('username', user.username);
     formData.set('password', user.password);
-
+    console.log('from rest');
     return this.httpClient.post<Btoken>('http://localhost:8080/authenticate',formData/* , httpOptions */);
     // if(user.username === STANDARD_USER_NAME && user.password === STANDARD_PASSWORD )
     //   return of<Btoken>({btoken:`${TOKEN}`});

@@ -2,3 +2,12 @@
 .input-error-msg{
     color: red;
 }
+
+body{
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+a{
+    color: skyblue;
+}

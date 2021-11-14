@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lrcontainer',
@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lrcontainer.component.css']
 })
 export class LRContainerComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
 }

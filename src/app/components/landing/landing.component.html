@@ -20,7 +20,9 @@
                 (btnClick)="submitForm()"></app-button>
         </div>
     </form>
-
+    <div *ngIf="authenticationStatusMsg !== '' ">
+        {{authenticationStatusMsg}}
+    </div>
     <a routerLink="/register">New User ? Register here</a>
 
 </div>
