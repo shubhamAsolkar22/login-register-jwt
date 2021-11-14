@@ -7,13 +7,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { ButtonComponent } from './components/button/button.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LRContainerComponent } from './components/lrcontainer/lrcontainer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    ButtonComponent
+    ButtonComponent,
+    RegisterComponent,
+    LRContainerComponent
   ],
   imports: [
     BrowserModule,

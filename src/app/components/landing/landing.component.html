@@ -1,14 +1,26 @@
 <div class="landing-page">
+
     <form [formGroup]="landingform">
-        <label for="email">Email: </label>
-        <input (focusout)="checkIfUserExists(email && email.value)" type="text" name="email" id="email" placeholder="Abc@xyz.com" formControlName="email" />
-        <div class="input-error-msg" *ngIf="email !== null && email.touched && email.errors?.required">Email is
-            required.</div>
-        <div class="input-error-msg" *ngIf="email !== null && email.touched && email.errors?.email">Please enter a valid
-            email.</div>
-        <!-- <button type="submit" name="submitUN" id="submitUN" value="Next"/> -->
-        <app-button *ngIf="email !== null && email.touched && email.valid && userExists" color="skyblue" text="Next"
-            (btnClick)="goForPwd()"></app-button>
+        <div class="form-control"><label for="email">Email: </label>
+            <input type="text" name="email" id="email" placeholder="Abc@xyz.com" formControlName="email" />
+            <div class="input-error-msg" *ngIf="email !== null && email.touched && email.errors?.required">Email is
+                required.</div>
+            <div class="input-error-msg" *ngIf="email !== null && email.touched && email.errors?.email">Please enter a
+                valid
+                email.</div>
+        </div>
+
+        <div class="form-control">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" placeholder="*****" formControlName="password" />
+        </div>
+        <div class="form-control">
+            <app-button *ngIf="email !== null && email.touched && email.valid 
+        && password !== null && password.touched && password.valid" color="skyblue" text="Next"
+                (btnClick)="submitForm()"></app-button>
+        </div>
     </form>
-    <!-- <div *ngIf="userExists">User is present.</div> -->
+
+    <a routerLink="/register">New User ? Register here</a>
+
 </div>
